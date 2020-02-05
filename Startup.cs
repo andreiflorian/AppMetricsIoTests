@@ -26,7 +26,7 @@ namespace AppMetricsTest
             var filter = new MetricsFilter().WhereType(MetricType.Timer);
             var metrics = AppMetrics.CreateDefaultBuilder()                
                         .Report.ToInfluxDb(options => {
-                            options.InfluxDb.BaseUri = new Uri("http://hassio.local:8086");
+                            options.InfluxDb.BaseUri = new Uri("http://192.168.0.197:8086");
                             options.InfluxDb.Database = "metricsdatabase";
                             options.InfluxDb.UserName = "monitor";
                             options.InfluxDb.Password = "monitor";
